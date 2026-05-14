@@ -216,20 +216,36 @@ h3 {
 
 .nav-toggle {
   display: none;
-  width: 42px; height: 38px;
+  width: 42px; height: 40px;
   padding: 0;
-  background: transparent;
+  place-items: center;
+  background: rgba(237,230,217,.04);
   border: 1px solid var(--line);
   border-radius: 10px;
   cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.nav-toggle:hover,
+.nav-toggle[aria-expanded="true"] {
+  background: rgba(237,230,217,.09);
+  border-color: rgba(232,180,74,.42);
 }
 .nav-toggle span {
   display: block;
+  grid-area: 1 / 1;
   width: 18px; height: 2px;
-  margin: 5px auto;
   background: var(--text);
   border-radius: 2px;
+  transform-origin: center;
+  transition: transform .18s ease, opacity .18s ease, background .18s ease;
 }
+.nav-toggle span:nth-child(1) { transform: translateY(-6px); }
+.nav-toggle span:nth-child(2) { transform: translateY(0); }
+.nav-toggle span:nth-child(3) { transform: translateY(6px); }
+.nav-toggle[aria-expanded="true"] span { background: var(--amber); }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg); }
 
 /* ── Hero ── */
 .hero {
@@ -1102,7 +1118,7 @@ h3 {
 @media (max-width: 980px) {
   .site-header { align-items: flex-start; }
 
-  .nav-toggle { display: flex; align-items: center; justify-content: center; }
+  .nav-toggle { display: grid; }
 
   .site-nav {
     position: absolute;
