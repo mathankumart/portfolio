@@ -61,11 +61,14 @@ const domainBtns = [...document.querySelectorAll("[data-domain-btn]")];
 
 domainBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const domain  = btn.dataset.domainBtn;
-    const detail  = btn.closest(".skill-domain")?.querySelector(".sd-detail");
-    const isOpen  = btn.classList.contains("is-active");
-
-    if (isOpen) return;
+    const isOpen = btn.classList.contains("is-active");
+    const currentIndex = domainBtns.indexOf(btn);
+    const nextIndex = (currentIndex + 1) % domainBtns.length;
+    const previousIndex = Math.max(currentIndex - 1, 0);
+    const targetBtn = isOpen
+      ? domainBtns[currentIndex === domainBtns.length - 1 ? previousIndex : nextIndex]
+      : btn;
+    const targetDetail = targetBtn.closest(".skill-domain")?.querySelector(".sd-detail");
 
     // Close all
     domainBtns.forEach((b) => {
@@ -75,12 +78,10 @@ domainBtns.forEach((btn) => {
       if (d) d.classList.remove("is-open");
     });
 
-    // Open clicked (toggle)
-    if (!isOpen) {
-      btn.classList.add("is-active");
-      btn.setAttribute("aria-expanded", "true");
-      if (detail) detail.classList.add("is-open");
-    }
+    // Re-clicking the active section advances, except the last section moves back.
+    targetBtn.classList.add("is-active");
+    targetBtn.setAttribute("aria-expanded", "true");
+    if (targetDetail) targetDetail.classList.add("is-open");
   });
 });
 
