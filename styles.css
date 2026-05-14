@@ -464,7 +464,14 @@ h3 {
   cursor: pointer;
   transition: transform .15s ease, background .15s ease, color .15s ease;
 }
-.button span { font-family: var(--font-mono); font-size: 0.72rem; }
+.button span {
+  display: inline-grid;
+  width: 1.1em;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  line-height: 1;
+}
 .button:hover { transform: translateY(-2px); background: rgba(237,230,217,.13); }
 .button.primary { color: var(--ink); background: var(--amber); border-color: var(--amber); }
 .button.primary:hover { background: #f0c16a; border-color: #f0c16a; }
