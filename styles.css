@@ -233,6 +233,8 @@ h3 {
 .nav-toggle span {
   display: block;
   grid-area: 1 / 1;
+  align-self: center;
+  justify-self: center;
   width: 18px; height: 2px;
   background: var(--text);
   border-radius: 2px;
