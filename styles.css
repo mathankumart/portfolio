@@ -362,6 +362,69 @@ h3 {
   border-top: 1px solid rgba(10,9,8,.1);
 }
 
+/* ═══════════════════════════════════════════════
+   404
+   ═══════════════════════════════════════════════ */
+
+.not-found-page {
+  display: grid;
+  min-height: calc(100vh - 150px);
+  align-items: center;
+  margin-top: clamp(14px, 2vw, 24px);
+  padding: clamp(20px, 3.5vw, 48px) clamp(24px, 5vw, 56px) clamp(28px, 4.5vw, 60px);
+  background:
+    linear-gradient(90deg, rgba(10,9,8,.96) 0%, rgba(10,9,8,.88) 44%, rgba(10,9,8,.34) 100%),
+    url("assets/404-background-desktop.png") center / cover no-repeat;
+  border: 1px solid rgba(237,230,217,.08);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.not-found-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+  gap: 18px;
+  text-align: left;
+  max-width: 920px;
+  padding: 0;
+}
+
+.not-found-panel h1 {
+  max-width: 620px;
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.not-found-copy {
+  max-width: 420px;
+  margin: 0;
+  color: var(--soft);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.not-found-visual {
+  display: flex;
+  justify-items: center;
+  gap: 12px;
+}
+
+.not-found-visual span {
+  color: var(--teal);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.not-found-actions {
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
 .fact-label {
   color: #0e7f75;
   font-family: var(--font-ui);
@@ -1277,7 +1340,8 @@ h3 {
 
   .hero,
   .experience-board,
-  .contact-panel { grid-template-columns: 1fr; }
+  .contact-panel,
+  .not-found-panel { grid-template-columns: 1fr; }
 
   .hero { justify-items: center; }
   .hero-copy {
@@ -1311,6 +1375,27 @@ h3 {
   h2 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
 
   .hero { padding-top: 20px; }
+  .not-found-page {
+    min-height: min(720px, calc(100vh - 120px));
+    align-items: end;
+    padding: 32px 22px 44px;
+    background:
+      linear-gradient(180deg, rgba(10,9,8,.18) 0%, rgba(10,9,8,.72) 48%, rgba(10,9,8,.98) 78%),
+      url("assets/404-background-mobile.png") center top / 100% auto no-repeat;
+  }
+  .not-found-panel {
+    justify-items: center;
+    padding: 0;
+    text-align: center;
+  }
+  .not-found-panel h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+  .not-found-copy {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+  .not-found-actions { justify-content: center; }
   .hero-copy,
   .contact-panel { padding: 24px; }
   .hero-actions { flex-direction: column; }
