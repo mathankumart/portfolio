@@ -4,6 +4,7 @@ const navToggle  = document.querySelector("[data-nav-toggle]");
 const navLinks   = [...document.querySelectorAll(".site-nav a")];
 const experienceTabs   = [...document.querySelectorAll("[data-exp-tab]")];
 const experiencePanels = [...document.querySelectorAll("[data-exp-panel]")];
+const blogGrid = document.querySelector("[data-blog-grid]");
 
 /* ── Mobile nav toggle ── */
 navToggle?.addEventListener("click", () => {
@@ -91,3 +92,51 @@ const setHeaderShadow = () => {
 };
 setHeaderShadow();
 window.addEventListener("scroll", setHeaderShadow, { passive: true });
+
+/* ── Blog feed ── */
+const escapeHtml = (value = "") =>
+  value.replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  }[char]));
+
+const formatPostDate = (value) => {
+  const date = new Date(value);
+  if (Number.isNaN(date.valueOf())) return "";
+  return new Intl.DateTimeFormat("en", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
+};
+
+const renderBlogPosts = (posts) => {
+  if (!blogGrid || !posts?.length) return;
+
+  blogGrid.innerHTML = posts.slice(0, 3).map((post) => {
+    const title = escapeHtml(post.title);
+    const excerpt = escapeHtml(post.excerpt);
+    const date = escapeHtml(formatPostDate(post.publishedAt));
+    const image = escapeHtml(post.image);
+    const imageMarkup = image
+      ? `<img src="${image}" alt="${title} blog preview" loading="lazy">`
+      : "";
+
+    return `
+      <a class="blog-card" href="${escapeHtml(post.url)}" target="_blank" rel="noreferrer">
+        ${imageMarkup}
+        <span>${date}</span>
+        <strong>${title}</strong>
+        <p>${excerpt}</p>
+      </a>
+    `;
+  }).join("");
+};
+
+fetch("assets/data/blogs.json", { cache: "no-cache" })
+  .then((response) => response.ok ? response.json() : null)
+  .then((data) => renderBlogPosts(data?.posts))
+  .catch(() => {});

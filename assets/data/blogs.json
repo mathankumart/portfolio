@@ -1,0 +1,47 @@
+{
+  "source": "https://blog.mathankumar.in/feed",
+  "posts": [
+    {
+      "title": "My Experiments with AI: From Vibe Coding to Agentic Engineering",
+      "url": "https://blog.mathankumar.in/my-experiments-with-ai-from-vibe-coding-to-agentic-engineering-235e43d4959e",
+      "publishedAt": "2026-05-20T03:59:15.000Z",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*N47TRgb--3wbJ6cQ2luogw.png",
+      "excerpt": "Vibe coding is no longer a novelty By now, most engineering teams have seen some version of it: a developer gives an AI assistant a rough..."
+    },
+    {
+      "title": "AdBlocker : An Inevitable Revolution for Digital Advertising",
+      "url": "https://blog.mathankumar.in/adblocker-an-inevitable-revolution-for-digital-advertising-db957650e247",
+      "publishedAt": "2016-02-21T06:43:09.000Z",
+      "image": "https://cdn-images-1.medium.com/max/770/0*H-o9is3r1OvjH119",
+      "excerpt": "AdBlockers, the white knight of web surfers had always been the tormentor for webloggers. With the increase in agitation over the cluttered pop ups &..."
+    },
+    {
+      "title": "Will “ServiceWorker” be the Trump card for browser in Web vs Native App battle?",
+      "url": "https://blog.mathankumar.in/will-serviceworker-be-the-trump-card-for-browser-in-web-vs-native-app-battle-f4e3cedb5567",
+      "publishedAt": "2015-11-15T11:13:13.000Z",
+      "image": "https://cdn-images-1.medium.com/max/638/0*WgDn74kLcDl4Yiug",
+      "excerpt": "Above Charles Darwin’s quote(sidestepping this contrary) accords not only for Bio world but in Tech world also. In the history of tech world,..."
+    },
+    {
+      "title": "Hide your Personal files in an Image without any 3rd party software",
+      "url": "https://blog.mathankumar.in/hide-your-personal-files-in-an-image-without-any-3rd-party-software-277b521ea101",
+      "publishedAt": "2015-11-11T18:21:47.000Z",
+      "image": "https://cdn-images-1.medium.com/max/770/0*fHGI9PoZIW1qYPsO",
+      "excerpt": "Hiding your personal data from others have always been a difficult job. Some people used to hide files by creating a hidden folder inside multi-level..."
+    },
+    {
+      "title": "Language, No longer a barrier",
+      "url": "https://blog.mathankumar.in/language-no-longer-a-barrier-75c1c8157f10",
+      "publishedAt": "2015-11-11T18:05:44.000Z",
+      "image": "https://cdn-images-1.medium.com/max/533/0*Gi-TGkPU-5sMVOUs",
+      "excerpt": "Gone are the days when we need local guide during National/Overseas tour, subtitles/friend for other language movies and giving awkward look on..."
+    },
+    {
+      "title": "Speed up your System performance without 3rd party software",
+      "url": "https://blog.mathankumar.in/speed-up-your-system-performance-without-3rd-party-software-75ddacebe196",
+      "publishedAt": "2015-11-11T16:29:15.000Z",
+      "image": "https://cdn-images-1.medium.com/max/770/0*dPtHu9J5zDmJRM_j",
+      "excerpt": "To speed up the system performance, I am not going to say, “Dudes, get high speed CPU, RAM, hard disk, etc.,” or “Install these X or Y software and..."
+    }
+  ]
+}

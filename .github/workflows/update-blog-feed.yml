@@ -1,0 +1,38 @@
+name: Update blog feed
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-blog-feed:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Fetch Medium feed
+        run: node scripts/update-medium-feed.mjs
+
+      - name: Commit updated feed
+        run: |
+          if git diff --quiet -- assets/data/blogs.json; then
+            echo "No blog feed changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/blogs.json
+          git commit -m "Update blog feed"
+          git push
