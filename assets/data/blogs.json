@@ -2,6 +2,13 @@
   "source": "https://blog.mathankumar.in/feed",
   "posts": [
     {
+      "title": "My Experiments with Backend systems: AWS Lambda Beyond the Happy Path",
+      "url": "https://blog.mathankumar.in/my-experiments-with-backend-systems-aws-lambda-beyond-the-happy-path-ce26dbbbdf0d",
+      "publishedAt": "2026-06-02T14:43:27.000Z",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*poNbmWbSvjM84q1OxA6-4g.png",
+      "excerpt": "Knowing where Lambda fits and where Predictability takes over Serverless architecture was not new to me conceptually, but my real-world exposure..."
+    },
+    {
       "title": "My Experiments with Distributed Systems: Google Cloud Spanner",
       "url": "https://blog.mathankumar.in/my-experiments-with-distributed-systems-google-cloud-spanner-3ed5e40dbf86",
       "publishedAt": "2026-05-26T04:01:00.000Z",
@@ -35,13 +42,6 @@
       "publishedAt": "2015-11-11T18:21:47.000Z",
       "image": "https://cdn-images-1.medium.com/max/770/0*fHGI9PoZIW1qYPsO",
       "excerpt": "Hiding your personal data from others have always been a difficult job. Some people used to hide files by creating a hidden folder inside multi-level..."
-    },
-    {
-      "title": "Language, No longer a barrier",
-      "url": "https://blog.mathankumar.in/language-no-longer-a-barrier-75c1c8157f10",
-      "publishedAt": "2015-11-11T18:05:44.000Z",
-      "image": "https://cdn-images-1.medium.com/max/533/0*Gi-TGkPU-5sMVOUs",
-      "excerpt": "Gone are the days when we need local guide during National/Overseas tour, subtitles/friend for other language movies and giving awkward look on..."
     }
   ]
 }
