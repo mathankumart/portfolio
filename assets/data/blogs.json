@@ -2,6 +2,13 @@
   "source": "https://blog.mathankumar.in/feed",
   "posts": [
     {
+      "title": "My Experiments with Reliability: Building a Disaster Recovery System for a Fintech Platform",
+      "url": "https://blog.mathankumar.in/my-experiments-with-reliability-building-a-disaster-recovery-system-for-a-fintech-platform-039877dd3de1",
+      "publishedAt": "2026-06-09T14:12:55.000Z",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*3w31q2V6WchX-ghDbYyxMQ.png",
+      "excerpt": "Note: Some project-specific details, such as AWS regions and internal identifiers, have been intentionally abstracted for anonymity. The..."
+    },
+    {
       "title": "My Experiments with Backend systems: AWS Lambda Beyond the Happy Path",
       "url": "https://blog.mathankumar.in/my-experiments-with-backend-systems-aws-lambda-beyond-the-happy-path-ce26dbbbdf0d",
       "publishedAt": "2026-06-02T14:43:27.000Z",
@@ -35,13 +42,6 @@
       "publishedAt": "2015-11-15T11:13:13.000Z",
       "image": "https://cdn-images-1.medium.com/max/638/0*WgDn74kLcDl4Yiug",
       "excerpt": "Above Charles Darwin’s quote(sidestepping this contrary) accords not only for Bio world but in Tech world also. In the history of tech world,..."
-    },
-    {
-      "title": "Hide your Personal files in an Image without any 3rd party software",
-      "url": "https://blog.mathankumar.in/hide-your-personal-files-in-an-image-without-any-3rd-party-software-277b521ea101",
-      "publishedAt": "2015-11-11T18:21:47.000Z",
-      "image": "https://cdn-images-1.medium.com/max/770/0*fHGI9PoZIW1qYPsO",
-      "excerpt": "Hiding your personal data from others have always been a difficult job. Some people used to hide files by creating a hidden folder inside multi-level..."
     }
   ]
 }
